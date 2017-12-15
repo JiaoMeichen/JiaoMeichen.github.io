@@ -2,6 +2,7 @@
 title: cookie的使用
 date: 2017-12-11 23:05:28
 tags: [javascript]
+categories: JavaScript
 ---
 cookie的增删改查
 <!-- more -->
