@@ -1,8 +1,8 @@
 ---
 title: cookie的使用
 date: 2017-12-11 23:05:28
-tags: [javascript]
-categories: JavaScript
+tags: [插件]
+categories: 常用插件
 ---
 cookie的增删改查
 <!-- more -->

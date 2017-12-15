@@ -1,8 +1,8 @@
 ---
 title: Qrcode生成二维码
 date: 2017-12-11 23:30:35
-tags:
-categories: JavaScript
+tags: [插件]
+categories: 常用插件
 ---
  用于根据某字符串生成二维码
 <!-- more -->
