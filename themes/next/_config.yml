@@ -118,8 +118,9 @@ scheme: Gemini
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
+social:
+  GitHub: https://github.com/JiaoMeichen
+  简书: http://www.jianshu.com/u/0c1b1c2afc11
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -134,6 +135,8 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
+  GitHub: github
+  简书: github
 
 # Blog rolls
 links_icon: link
@@ -146,7 +149,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: http://upload.jianshu.io/users/upload_avatars/3859151/36ace31eeaaa.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240
 
 # Table Of Contents in the Sidebar
 toc:
