@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="工作中常用效果实现">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见效果实现">
+<meta property="og:url" content="http://yoursite.com/2017/12/15/常见效果实现/index.html">
+<meta property="og:site_name" content="JiaoMeichen的技术博客">
+<meta property="og:description" content="工作中常用效果实现">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-18T14:23:35.363Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常见效果实现">
+<meta name="twitter:description" content="工作中常用效果实现">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/12/15/常见效果实现/"/>
+
+
+
+
+
+  <title>常见效果实现 | JiaoMeichen的技术博客</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fece60c651784bb542d741228c772e57";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">JiaoMeichen的技术博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/常见效果实现/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JiaoMeichen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://upload.jianshu.io/users/upload_avatars/3859151/36ace31eeaaa.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JiaoMeichen的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">常见效果实现</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-15T10:21:10+08:00">
+                2017-12-15
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-18T22:23:35+08:00">
+                2017-12-18
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  964
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>工作中常用效果实现<br><a id="more"></a></p>
+<h4 id="TAB切换—JQuery-JavaScript"><a href="#TAB切换—JQuery-JavaScript" class="headerlink" title="TAB切换—JQuery+JavaScript"></a>TAB切换—JQuery+JavaScript</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">   &lt;b id=<span class="string">"box"</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">"active"</span>&gt;11111111111111111111111111111111111&lt;/div&gt;</span><br><span class="line">        &lt;div&gt;22222222222222222222222222222222222&lt;/div&gt;</span><br><span class="line">        &lt;div&gt;33333333333333333333333333333333333&lt;/div&gt;</span><br><span class="line">    &lt;/b&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;111&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;222&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;333&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">css:</span><br><span class="line">    li&#123; cursor: pointer; &#125;</span><br><span class="line">    b div&#123;display: none; &#125;</span><br><span class="line">   .active&#123; display: block; &#125;</span><br><span class="line">js:</span><br><span class="line">       $(<span class="string">"ul li"</span>).click(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">            var index = $(this).index();</span><br><span class="line">            $(<span class="string">"b div"</span>).eq(index).addClass(<span class="string">"active"</span>).siblings().removeClass(<span class="string">"active"</span>);</span><br><span class="line">        &#125;)</span><br><span class="line">jq:</span><br><span class="line">  var oLi = document.getElementsByTagName(<span class="string">"li"</span>);</span><br><span class="line">			var oDiv = document.getElementsByTagName(<span class="string">"div"</span>);</span><br><span class="line">			<span class="keyword">for</span> (var i = 0;i &lt; oLi.length;i++) &#123;</span><br><span class="line">				oLi[i].index=i;</span><br><span class="line">				oLi[i].onclick = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">					<span class="keyword">for</span> (var j = 0;j &lt; oDiv.length;j++) &#123;</span><br><span class="line">						oDiv[j].className=<span class="string">""</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					oDiv[this.index].className = <span class="string">"active"</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="发送验证码倒计时"><a href="#发送验证码倒计时" class="headerlink" title="发送验证码倒计时"></a>发送验证码倒计时</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">使用方法：time($(<span class="string">"input"</span>))</span><br><span class="line">/* 倒计时函数 */</span><br><span class="line">var <span class="built_in">wait</span> = 60,</span><br><span class="line">	timer;</span><br><span class="line"><span class="keyword">function</span> time(o) &#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">wait</span> == 0) &#123;</span><br><span class="line">		o.removeAttr(<span class="string">"disabled"</span>);</span><br><span class="line">		o.css(<span class="string">"backgroundColor"</span>, <span class="string">"rgba(34,211,162,1)"</span>);</span><br><span class="line">		o.val(<span class="string">"获取验证码"</span>);</span><br><span class="line">		<span class="built_in">wait</span> = 60;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		o.attr(<span class="string">"disabled"</span>, <span class="literal">true</span>);</span><br><span class="line">		o.css(<span class="string">"backgroundColor"</span>, <span class="string">"rgba(34,211,162,0.7)"</span>);</span><br><span class="line">		o.val(<span class="string">"重新获取("</span> + <span class="built_in">wait</span> + <span class="string">"s)"</span>);</span><br><span class="line">		<span class="built_in">wait</span>--;</span><br><span class="line">		timer = setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">			time(o)</span><br><span class="line">		&#125;, 1000)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="横向滚动"><a href="#横向滚动" class="headerlink" title="横向滚动"></a>横向滚动</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">html：ul  li 标签</span><br><span class="line">css：</span><br><span class="line">ul &#123;width: 100%;height: 100%;overflow: auto;white-space: nowrap;<span class="built_in">float</span>: left;font-size: 0;&#125;</span><br><span class="line">ul li &#123;display: inline-block;margin-right: 10px;width: 100px;height: 100px;border: 1px solid red;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="居中总结"><a href="#居中总结" class="headerlink" title="居中总结"></a>居中总结</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">使用方法：fun.pop($(<span class="string">"元素"</span>))</span><br><span class="line">var fun = &#123;</span><br><span class="line">	pop: <span class="keyword">function</span>(obj) &#123;</span><br><span class="line">		obj.css(<span class="string">"display"</span>, <span class="string">"block"</span>); //obj.fadeIn()</span><br><span class="line">		$(<span class="string">"#maskBlack"</span>).css(<span class="string">"display"</span>, <span class="string">"block"</span>);</span><br><span class="line">		_width = window.innerWidth;</span><br><span class="line">		_height = window.innerHeight;</span><br><span class="line">		console.log(_width + <span class="string">"  "</span> + _height)</span><br><span class="line">		var _x = (_width - parseInt(obj.width())) / 2;</span><br><span class="line">		var _y = (_height - parseInt(obj.height())) / 2;</span><br><span class="line">		obj.css(<span class="string">"top"</span>, _y + <span class="string">"px"</span>);</span><br><span class="line">		obj.css(<span class="string">"left"</span>, _x + <span class="string">"px"</span>);</span><br><span class="line">		$(<span class="string">"html,body"</span>).addClass(<span class="string">"lock-body"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="全选功能"><a href="#全选功能" class="headerlink" title="全选功能"></a>全选功能</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">		&lt;title&gt;jquery实现全选非全选&lt;/title&gt;</span><br><span class="line">		&lt;script src=<span class="string">"http://libs.baidu.com/jquery/1.11.3/jquery.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">		&lt;style&gt;</span><br><span class="line">			input &#123;vertical-align: middle&#125;</span><br><span class="line">		       .container &#123;width: 500px;margin: 20px auto;&#125;</span><br><span class="line">		&lt;/style&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">			&lt;div class=<span class="string">"top"</span>&gt;</span><br><span class="line">				&lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> value=<span class="string">"全选"</span> id=<span class="string">"all"</span> class=<span class="string">"all"</span> /&gt;</span><br><span class="line">				&lt;label <span class="keyword">for</span>=<span class="string">"all"</span>&gt;全选&lt;/label&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">			&lt;div class=<span class="string">"down"</span>&gt;</span><br><span class="line">				&lt;div class=<span class="string">"con"</span>&gt;</span><br><span class="line">					&lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> id=<span class="string">"sel1"</span> class=<span class="string">"sel sel1"</span> /&gt;</span><br><span class="line">					&lt;label&gt;选项1&lt;/label&gt;</span><br><span class="line">				&lt;/div&gt;</span><br><span class="line">				&lt;div class=<span class="string">"con"</span>&gt;</span><br><span class="line">					&lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> id=<span class="string">"sel2"</span> class=<span class="string">"sel sel2"</span> /&gt;</span><br><span class="line">					&lt;label&gt;选项2&lt;/label&gt;</span><br><span class="line">				&lt;/div&gt;</span><br><span class="line">				&lt;div class=<span class="string">"con"</span>&gt;</span><br><span class="line">					&lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> id=<span class="string">"sel3"</span> class=<span class="string">"sel sel3"</span> /&gt;</span><br><span class="line">					&lt;label&gt;选项3&lt;/label&gt;</span><br><span class="line">				&lt;/div&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			$(<span class="string">".all"</span>).on(<span class="string">"click"</span>,<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">				$(<span class="string">".sel"</span>).prop(<span class="string">"checked"</span>, $(this).prop(<span class="string">"checked"</span>));</span><br><span class="line">			&#125;);</span><br><span class="line">			$(<span class="string">".sel"</span>).on(<span class="string">"click"</span>,<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">				var <span class="variable">$sel</span> = $(<span class="string">".sel"</span>);</span><br><span class="line">				var b = <span class="literal">true</span>;</span><br><span class="line">				<span class="keyword">for</span>(var i = 0; i &lt; <span class="variable">$sel</span>.length; i++) &#123;</span><br><span class="line">					<span class="keyword">if</span>(<span class="variable">$sel</span>[i].checked == <span class="literal">false</span>) &#123;</span><br><span class="line">						b = <span class="literal">false</span>;</span><br><span class="line">						<span class="built_in">break</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				$(<span class="string">".all"</span>).prop(<span class="string">"checked"</span>, b);</span><br><span class="line">			&#125;)</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="一键复制"><a href="#一键复制" class="headerlink" title="一键复制"></a>一键复制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1、引入clipboard.min.js</span><br><span class="line">2、&lt;button class=&quot;copyBtn&quot; data-clipboard-text=&quot;&quot; data-clipboard-action=&quot;copy&quot;&gt;点击复制&lt;/button&gt;</span><br><span class="line">3、$(&quot;button&quot;).attr(&quot;data-clipboard-text&quot;, &quot;jiaomeichen.github.io&quot;);</span><br><span class="line">			var clipboard = new Clipboard(&apos;.copyBtn&apos;);</span><br><span class="line">			clipboard.on(&apos;success&apos;, function(e) &#123;</span><br><span class="line">				layer.msg(&quot;已复制成功&quot; + e.text);</span><br><span class="line">			&#125;);</span><br><span class="line">			clipboard.on(&apos;error&apos;, function(e) &#123;</span><br><span class="line">				layer.open(&#123;</span><br><span class="line">					title: &apos;提示&apos;,</span><br><span class="line">					content: &apos;您的浏览器可能不支持，请手动复制~&apos;</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="设置共用rem"><a href="#设置共用rem" class="headerlink" title="设置共用rem"></a>设置共用rem</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">使用方法：width:4rem;max-width:100%;</span><br><span class="line">说明：此方法设置了最大宽度为600px </span><br><span class="line">/*rem*/</span><br><span class="line">(<span class="keyword">function</span>(doc, win) &#123;</span><br><span class="line">	var docEl = doc.documentElement,</span><br><span class="line">		resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> window ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</span><br><span class="line">		recalc = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">			var clientWidth = docEl.clientWidth;</span><br><span class="line">			<span class="keyword">if</span>(!clientWidth) <span class="built_in">return</span>;</span><br><span class="line">			//			docEl.style.fontSize = 100 * (clientWidth / 360) + <span class="string">'px'</span>;</span><br><span class="line">			<span class="keyword">if</span>(clientWidth &gt;= 600) &#123;</span><br><span class="line">				docEl.style.fontSize = <span class="string">'150px'</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				docEl.style.fontSize = 100 * (clientWidth / 360) + <span class="string">'px'</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">	<span class="keyword">if</span>(!doc.addEventListener) <span class="built_in">return</span>;</span><br><span class="line">	win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">	doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(document, window);</span><br></pre></td></tr></table></figure>
+<h4 id="解析页面链接中的参数值"><a href="#解析页面链接中的参数值" class="headerlink" title="解析页面链接中的参数值"></a>解析页面链接中的参数值</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/*页面之间传值-解析*/</span><br><span class="line"><span class="keyword">function</span> getParam(name) &#123;</span><br><span class="line">	var reg = new RegExp(<span class="string">"(^|&amp;)"</span> + name + <span class="string">"=([^&amp;]*)(&amp;|$)"</span>, <span class="string">"i"</span>);</span><br><span class="line">	var r = window.location.search.substr(1).match(reg);</span><br><span class="line">	<span class="keyword">if</span>(r != null) <span class="built_in">return</span> decodeURI(r[2]);</span><br><span class="line">	<span class="built_in">return</span> null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="判断是否为微信浏览器"><a href="#判断是否为微信浏览器" class="headerlink" title="判断是否为微信浏览器"></a>判断是否为微信浏览器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">isWeiXinClient</span></span>() &#123;</span><br><span class="line">    var ua = navigator.userAgent.toLowerCase(); </span><br><span class="line">    <span class="keyword">if</span> (ua.match(/MicroMessenger/i)==<span class="string">"micromessenger"</span>) &#123; </span><br><span class="line">        <span class="built_in">return</span> <span class="literal">true</span>; </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; </span><br><span class="line">        <span class="built_in">return</span> <span class="literal">false</span>; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 测试</span><br><span class="line">alert(isWeiXinClient());</span><br></pre></td></tr></table></figure>
+<h4 id="15秒倒计时跳转"><a href="#15秒倒计时跳转" class="headerlink" title="15秒倒计时跳转"></a>15秒倒计时跳转</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var <span class="built_in">wait</span> = 15,</span><br><span class="line">	timer;</span><br><span class="line">time($(<span class="string">".myRead"</span>));</span><br><span class="line"><span class="keyword">function</span> time(o) &#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">wait</span> == 0) &#123;</span><br><span class="line">		o.removeAttr(<span class="string">"disabled"</span>);</span><br><span class="line">		o.removeClass(<span class="string">"myRead_time"</span>)</span><br><span class="line">		o.html(<span class="string">"已阅读并同意"</span>);</span><br><span class="line">		<span class="built_in">wait</span> = 15;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		o.attr(<span class="string">"disabled"</span>, <span class="literal">true</span>);</span><br><span class="line">		o.html(<span class="string">"已阅读并同意("</span> + <span class="built_in">wait</span> + <span class="string">"s)"</span>);</span><br><span class="line">		<span class="built_in">wait</span>--;</span><br><span class="line">		timer = setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">			time(o)</span><br><span class="line">		&#125;, 1000)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/11/Qrcode生成二维码/" rel="next" title="Qrcode生成二维码">
+                <i class="fa fa-chevron-left"></i> Qrcode生成二维码
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/15/居中总结/" rel="prev" title="居中总结">
+                居中总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+	<div class="post-spread">
+	  
+	    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+	  
+	</div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://upload.jianshu.io/users/upload_avatars/3859151/36ace31eeaaa.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240"
+                alt="JiaoMeichen" />
+            
+              <p class="site-author-name" itemprop="name">JiaoMeichen</p>
+              <p class="site-description motion-element" itemprop="description">请多指教</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/JiaoMeichen" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/0c1b1c2afc11" target="_blank" title="简书">
+                    
+                      <i class="fa fa-fw fa-globe"></i>简书</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zziaguan.github.io/" title="zziaguan" target="_blank">zziaguan</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zhangyajie-BHQ.github.io/" title="zhangyajie-BHQ" target="_blank">zhangyajie-BHQ</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#TAB切换—JQuery-JavaScript"><span class="nav-number">1.</span> <span class="nav-text"><a href="#TAB&#x5207;&#x6362;&#x2014;JQuery-JavaScript" class="headerlink" title="TAB&#x5207;&#x6362;&#x2014;JQuery+JavaScript"></a>TAB&#x5207;&#x6362;&#x2014;JQuery+JavaScript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发送验证码倒计时"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x53D1;&#x9001;&#x9A8C;&#x8BC1;&#x7801;&#x5012;&#x8BA1;&#x65F6;" class="headerlink" title="&#x53D1;&#x9001;&#x9A8C;&#x8BC1;&#x7801;&#x5012;&#x8BA1;&#x65F6;"></a>&#x53D1;&#x9001;&#x9A8C;&#x8BC1;&#x7801;&#x5012;&#x8BA1;&#x65F6;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#横向滚动"><span class="nav-number">3.</span> <span class="nav-text"><a href="#&#x6A2A;&#x5411;&#x6EDA;&#x52A8;" class="headerlink" title="&#x6A2A;&#x5411;&#x6EDA;&#x52A8;"></a>&#x6A2A;&#x5411;&#x6EDA;&#x52A8;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#居中总结"><span class="nav-number">4.</span> <span class="nav-text"><a href="#&#x5C45;&#x4E2D;&#x603B;&#x7ED3;" class="headerlink" title="&#x5C45;&#x4E2D;&#x603B;&#x7ED3;"></a>&#x5C45;&#x4E2D;&#x603B;&#x7ED3;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全选功能"><span class="nav-number">5.</span> <span class="nav-text"><a href="#&#x5168;&#x9009;&#x529F;&#x80FD;" class="headerlink" title="&#x5168;&#x9009;&#x529F;&#x80FD;"></a>&#x5168;&#x9009;&#x529F;&#x80FD;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一键复制"><span class="nav-number">6.</span> <span class="nav-text"><a href="#&#x4E00;&#x952E;&#x590D;&#x5236;" class="headerlink" title="&#x4E00;&#x952E;&#x590D;&#x5236;"></a>&#x4E00;&#x952E;&#x590D;&#x5236;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置共用rem"><span class="nav-number">7.</span> <span class="nav-text"><a href="#&#x8BBE;&#x7F6E;&#x5171;&#x7528;rem" class="headerlink" title="&#x8BBE;&#x7F6E;&#x5171;&#x7528;rem"></a>&#x8BBE;&#x7F6E;&#x5171;&#x7528;rem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析页面链接中的参数值"><span class="nav-number">8.</span> <span class="nav-text"><a href="#&#x89E3;&#x6790;&#x9875;&#x9762;&#x94FE;&#x63A5;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x503C;" class="headerlink" title="&#x89E3;&#x6790;&#x9875;&#x9762;&#x94FE;&#x63A5;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x503C;"></a>&#x89E3;&#x6790;&#x9875;&#x9762;&#x94FE;&#x63A5;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x503C;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判断是否为微信浏览器"><span class="nav-number">9.</span> <span class="nav-text"><a href="#&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x5FAE;&#x4FE1;&#x6D4F;&#x89C8;&#x5668;" class="headerlink" title="&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x5FAE;&#x4FE1;&#x6D4F;&#x89C8;&#x5668;"></a>&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x5FAE;&#x4FE1;&#x6D4F;&#x89C8;&#x5668;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#15秒倒计时跳转"><span class="nav-number">10.</span> <span class="nav-text"><a href="#15&#x79D2;&#x5012;&#x8BA1;&#x65F6;&#x8DF3;&#x8F6C;" class="headerlink" title="15&#x79D2;&#x5012;&#x8BA1;&#x65F6;&#x8DF3;&#x8F6C;"></a>15&#x79D2;&#x5012;&#x8BA1;&#x65F6;&#x8DF3;&#x8F6C;</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JiaoMeichen</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">博客全站字数&#58;</span>
+    
+    <span title="博客全站字数">3.8k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
